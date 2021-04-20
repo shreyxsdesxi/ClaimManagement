@@ -1,0 +1,5 @@
+package com.cognizant.claimservice.model;
+
+public class Policy {
+
+}

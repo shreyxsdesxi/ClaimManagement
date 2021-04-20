@@ -1,0 +1,5 @@
+package com.cognizant.claimsService.service;
+
+public class PolicyMemberService {
+
+}

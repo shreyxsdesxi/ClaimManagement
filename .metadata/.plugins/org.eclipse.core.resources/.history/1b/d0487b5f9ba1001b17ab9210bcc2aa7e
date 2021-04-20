@@ -1,0 +1,26 @@
+package com.cognizant.claimservice.model;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.ManyToMany;
+
+import com.cognizant.policyService.entity.Member;
+import com.cognizant.policyService.entity.Provider;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class Policy {
+	
+	private int policyId;
+	private String benefits;
+	private int premium;
+	private int tenure;
+	private int elegibleAmount;
+	
+	
+	private Set<Provider> providerList = new HashSet<>();
+	
+	private Set<Member> memberList = new HashSet<>();
+	
+}

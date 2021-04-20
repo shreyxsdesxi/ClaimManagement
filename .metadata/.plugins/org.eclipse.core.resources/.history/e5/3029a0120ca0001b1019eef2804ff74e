@@ -1,0 +1,5 @@
+package com.cognizant.memberService.ValueObjects;
+
+public class ResponseObject {
+
+}

@@ -1,0 +1,5 @@
+package com.cognizant.memberService.entity;
+
+public class Claim {
+
+}

@@ -1,0 +1,5 @@
+
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒÞÁŽHç	RMINORZ
+CODE_SMELL
+h
+java:S3655"7Call "Optional#isPresent()" before accessing the value.(ÐŸžÎúÿÿÿÿ8¾ø»ÕŽ/Hé	RMAJORZBUG

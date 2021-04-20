@@ -1,0 +1,26 @@
+package com.cognizant.policyService.entity;
+
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+public class Provider {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "hospital_id")
+	private int hospitalId;
+	private String hospitalName;
+	
+	@ManyToMany
+	@JoinTable(name = "provider_policy", joinColumns = @JoinColumn(name = "pp_hospital_id", referencedColumnName = "hospital_id"), inverseJoinColumns = @JoinColumn(name = "pp_policy_id", referencedColumnName = "policy_id" ) )
+	private Set<Policy> policyList;
+	
+}

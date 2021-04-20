@@ -1,0 +1,44 @@
+package com.cognizant.memberService.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cognizant.memberService.ValueObjects.Claim;
+import com.cognizant.memberService.entity.Member;
+import com.cognizant.memberService.proxy.ClaimProxy;
+import com.cognizant.memberService.service.MemberService;
+
+@RestController
+//@RequestMapping(value = "/member")
+public class MemberController {
+	
+	@Autowired
+	private MemberService memberService;
+	
+	@Autowired
+	private ClaimProxy claimProxy;
+	
+	@GetMapping(value = "/{memberId}")
+	public List<Claim> getClaims(@PathVariable int memberId){
+		Member member = memberService.findById(memberId);
+		List<Claim> allClaimsWithMemberId = claimService.getAllClaimsWithMemberId(member);
+		System.out.println(allClaimsWithMemberId);
+		return allClaimsWithMemberId;
+	}
+	@GetMapping(value = "/member/{id}")
+	@ResponseBody
+	public Member getMember(@PathVariable int id) {
+		return memberService.findById(id);
+	} 
+	
+	@GetMapping(value = "/test")
+	public String test() {
+		return "test";
+	}
+	
+}

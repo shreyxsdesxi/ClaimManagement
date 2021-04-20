@@ -1,0 +1,17 @@
+package com.cognizant.memberService.proxy;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.cognizant.memberService.entity.MemberClaim;
+
+@FeignClient(name = "claims-service", url = "localhost:8000")
+public interface ClaimProxy {
+	
+	@GetMapping(value = "/claims/{memberId}")
+	public List<MemberClaim> retrieveClaims(@PathVariable int memberId);
+	
+}

@@ -1,0 +1,11 @@
+package com.cognizant.memberService.entity;
+
+public class Claim {
+	
+	long id;
+	String claimStatus;
+	
+	long memberId;
+	long policyId;
+	
+}

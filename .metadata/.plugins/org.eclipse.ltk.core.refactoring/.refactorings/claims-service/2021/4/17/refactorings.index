@@ -1,0 +1,13 @@
+1618724967480	Rename type 'MemberServiceApplication'
+1618724985260	Rename package 'com.cognizant.memberService'
+1618725003058	Rename package 'com.cognizant.memberService.controller'
+1618725018227	Rename package 'com.cognizant.memberService.entity'
+1618725028418	Rename package 'com.cognizant.memberService.repository'
+1618725040452	Rename package 'com.cognizant.memberService.service'
+1618725636197	Delete element
+1618725650790	Delete element
+1618725658086	Delete element
+1618725688060	Rename type 'MemberController'
+1618725854912	Delete elements
+1618725927992	Copy compilation unit
+1618768824623	Rename package 'com.cognizant.memberService.proxy'

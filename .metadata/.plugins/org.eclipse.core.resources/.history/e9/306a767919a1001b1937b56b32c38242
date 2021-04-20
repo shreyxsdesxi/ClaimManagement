@@ -1,0 +1,56 @@
+package com.cognizant.policyService;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.cognizant.policyService.entity.Policy;
+import com.cognizant.policyService.entity.Provider;
+import com.cognizant.policyService.repository.PolicyRepository;
+import com.cognizant.policyService.repository.ProviderRepository;
+
+@Component
+public class PolicyServiceCommandLineRunner implements CommandLineRunner{
+	
+	@Autowired
+	private ProviderRepository providerRepository;
+	
+	@Autowired
+	private PolicyRepository policyRepositoy;
+
+	@Override
+	public void run(String... args) throws Exception {
+		Provider provider = new Provider();
+		provider.setHospitalName("Red Cross Hospital");
+		provider.setLocation("Pune");
+		
+		Provider provider2 = new Provider();
+		provider2.setHospitalName("Cambridge Hospital");
+		provider2.setLocation("Bangalore");
+		
+		providerRepository.save(provider);
+		providerRepository.save(provider2);
+		
+		Policy policy = new Policy();
+		policy.setBenefits("Cancer covered");
+		
+		Policy policy2 = new Policy();
+		policy2.setBenefits("None");
+		
+		Policy policy3 = new Policy();
+		policy2.setBenefits("Good");
+		
+		Set<Provider> setProvider = new HashSet<>();
+		setProvider.add(provider);
+		setProvider.add(provider2);
+		
+		policy.setProviderList(setProvider);
+		
+		policyRepositoy.save(policy);
+		
+	}
+
+}

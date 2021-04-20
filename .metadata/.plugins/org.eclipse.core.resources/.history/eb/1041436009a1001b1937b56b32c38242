@@ -1,0 +1,28 @@
+package com.cognizant.policyService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.cognizant.policyService.entity.Provider;
+import com.cognizant.policyService.repository.ProviderRepository;
+
+@Component
+public class PolicyServiceCommandLineRunner implements CommandLineRunner{
+	
+	@Autowired
+	private ProviderRepository providerRepository;
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		Provider provider = new Provider();
+		provider.setHospitalName("Red Cross Hospital");
+		Provider provider2 = new Provider();
+		provider2.setHospitalName("Cambridge Hospital");
+		
+		providerRepository.save(provider);
+		providerRepository.save(provider2);
+	}
+
+}

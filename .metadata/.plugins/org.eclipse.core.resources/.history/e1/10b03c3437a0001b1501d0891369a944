@@ -1,0 +1,2 @@
+insert into claims(claim_status, member_id)
+values('Disputed', 1),('Approved', 1), ('Approved', 2);

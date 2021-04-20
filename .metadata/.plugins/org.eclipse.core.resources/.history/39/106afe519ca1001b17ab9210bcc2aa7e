@@ -1,0 +1,79 @@
+package com.cognizant.claimservice.controller;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.cognizant.claimservice.model.Claims;
+import com.cognizant.claimservice.model.Provider;
+import com.cognizant.claimservice.service.ClaimService;
+
+import antlr.collections.List;
+
+@RestController
+public class ClaimController {
+	
+	@Autowired
+	private ClaimService claimService;
+	
+	@GetMapping ("/getClaimStatus")
+	public <Claim> List findAllClaim(){
+		return ClaimService.getALLClaim;
+		
+	}
+	
+	@GetMapping ("/getClaimStatus/{claimId}")
+	public <Claim> List findAllClaimByClaimID(@PathVariable int claimId) {
+		return ClaimService.getALLClaimByClaimId(claimId);
+		
+	}
+
+	@GetMapping ("/getClaimStatus/{memberId}")
+	public <Claim> List findAllClaimByMemberID(@PathVariable int memberId) {
+		return ClaimService.getALLClaimByMemberId(memberId);	
+	}
+	@GetMapping ("/getClaimStatus/{policyId}")
+	public <Claim> List findAllClaimByPolicyID(@PathVariable int policyId) {
+		return ClaimService.getALLClaimByPolicyId(policyId);
+		
+	}
+	
+	@GetMapping(value = "/getClaimStatus/{policyId}/{memberId}/{claimNumber}")
+	public String getStatus(@PathVariable String policyId, @PathVariable String memberId, @PathVariable String claimNumber) {
+		int c  = Integer.parseInt(claimNumber);
+		int p = Integer.parseInt(policyId);
+		int m = Integer.parseInt(memberId);
+		Claims claim = claimService.getClaim(c, m, p);
+		return claim.getStatus();
+	}
+	
+	@GetMapping(value = "/submitClaim/{policyId}/{memberId}")
+	public ArrayList<Provider> submitClaim( @PathVariable int policyId, @PathVariable int memberId) {
+		//claimService.saveClaim(claim);
+		
+		HashMap<String, Integer> uriVariables = new HashMap<>();
+		uriVariables.put("policyId", policyId);
+		uriVariables.put("memberId", memberId);
+		
+		RestTemplate rt = new RestTemplate();
+		ResponseEntity<Integer> forEntity = rt.getForEntity("http://localhost:8002/getEligibleClaimAmount/{policyId}/{memberId}", Integer.class, uriVariables);
+		int elegibleAmount = forEntity.getBody();
+		
+		HashMap<String, Integer> uriVariables2 = new HashMap<>();
+		uriVariables.put("policyId", policyId);
+		
+		ResponseEntity<Provider[]> forEntity2 = rt.getForEntity("http://localhost:8002/getChainOfProviders/{policyId}", Provider[].class, uriVariables2);
+		Provider[] body = forEntity2.getBody();
+		ArrayList<Provider> asList = (ArrayList<Provider>) Arrays.asList(body);
+		return asList;
+	}
+}

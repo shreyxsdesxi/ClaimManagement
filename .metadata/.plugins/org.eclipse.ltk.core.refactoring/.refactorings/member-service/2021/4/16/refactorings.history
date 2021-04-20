@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;allClaimsWithMemberId&apos; from expression &apos;claimService.getAllClaimsWithMemberId(member)&apos;&#x0D;&#x0A;- Original project: &apos;member-service&apos;&#x0D;&#x0A;- Variable name: &apos;allClaimsWithMemberId&apos;&#x0D;&#x0A;- Destination method: &apos;com.cognizant.memberService.controller.MemberController.getClaims()&apos;&#x0D;&#x0A;- Variable expression: &apos;claimService.getAllClaimsWithMemberId(member)&apos;" description="Extract local variable &apos;allClaimsWithMemberId&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cognizant.memberService.controller{MemberController.java" name="allClaimsWithMemberId" replace="false" selection="1014 0" stamp="1618683229579" varType="false" version="1.0"/>
+</session>

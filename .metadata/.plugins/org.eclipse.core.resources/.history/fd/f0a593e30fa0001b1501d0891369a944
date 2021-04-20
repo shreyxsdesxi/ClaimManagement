@@ -1,0 +1,30 @@
+package com.cognizant.claimsService.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cognizant.claimsService.entity.Claim;
+import com.cognizant.claimsService.service.ClaimService;
+
+@RestController
+@RequestMapping(value = "/claims")
+public class ClaimsController {
+	
+	@Autowired
+	private ClaimService claimService;
+	
+	@GetMapping(value = "/{memberId}")
+	public List<Claim> getClaims(@PathVariable int memberId){
+		List<Claim> allClaimsWithMemberId = claimService.getAllClaimsWithMemberId(memberId);
+		System.out.println(allClaimsWithMemberId);
+		return allClaimsWithMemberId;
+	}
+	
+	
+	
+}

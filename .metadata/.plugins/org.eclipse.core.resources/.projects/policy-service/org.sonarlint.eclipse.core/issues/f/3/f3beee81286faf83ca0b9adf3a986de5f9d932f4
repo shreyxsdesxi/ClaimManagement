@@ -1,0 +1,11 @@
+
+n
+java:S1948$"3Make "policyMembersList" transient or serializable.(“üœÔûÿÿÿÿ8€åîÕ/H™
+RCRITICALZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İÀêHàRMINORZ
+CODE_SMELL
+x
+java:S1128"@Remove this unused import 'org.hibernate.type.SerializableType'.(ÿÙ‡½üÿÿÿÿ8Â£çÕ/H”
+RMINORZ
+CODE_SMELL

@@ -1,0 +1,10 @@
+package com.cognizant.claimsService.proxy;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name = "policy-service", url = "localhost:8001")
+public interface ClaimProxy {
+	
+	
+	
+}

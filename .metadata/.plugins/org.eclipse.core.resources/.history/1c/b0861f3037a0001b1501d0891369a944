@@ -1,0 +1,11 @@
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.h2.console.enabled=true
+spring.jpa.hibernate.ddl-auto = update
+spring.config.import=optional:configserver:
+
+
+logging.level.org.hibernate.SQL=trace
+logging.level.org.hibernate.type.descriptor.sql=trace
+
+spring.application.name=policy-service
+server.port=8002

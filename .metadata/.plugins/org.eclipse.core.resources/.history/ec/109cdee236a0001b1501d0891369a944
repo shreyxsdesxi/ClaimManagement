@@ -1,0 +1,11 @@
+package com.cognizant.claimsService.entity;
+
+import javax.persistence.OneToOne;
+
+public class MemberPolicy {
+	
+	@OneToOne(mappedBy = "policyId")
+	private Policy policy;
+	private int memberId;
+	
+}

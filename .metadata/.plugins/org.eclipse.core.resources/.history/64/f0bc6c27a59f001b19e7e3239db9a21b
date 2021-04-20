@@ -1,0 +1,5 @@
+package com.cognizant.memberService.repository;
+
+public interface ClaimRepository {
+
+}

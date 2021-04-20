@@ -1,0 +1,22 @@
+package com.cognizant.memberService.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cognizant.memberService.entity.Claim;
+import com.cognizant.memberService.entity.Member;
+import com.cognizant.memberService.repository.ClaimRepository;
+
+@Service
+public class ClaimService {
+	
+	@Autowired
+	private ClaimRepository claimRepository;
+	
+	public List<Claim> getAllClaimsWithMemberId(Member member){
+		return claimRepository.findByMember(member);
+	}
+	
+}

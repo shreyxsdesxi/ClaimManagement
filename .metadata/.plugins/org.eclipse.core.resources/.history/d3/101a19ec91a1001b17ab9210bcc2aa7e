@@ -1,0 +1,25 @@
+package com.cognizant.claimservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cognizant.claimservice.repository.ClaimRepo;
+
+import antlr.collections.List;
+
+@Service
+public class ClaimService {
+ public static List getALLClaim;
+@Autowired
+ ClaimRepo crepository;
+public static List getALLClaimByClaimId(int claimId) {
+	return ClaimService.getALLClaimByClaimId(claimId);
+}
+public static List getALLClaimByMemberId(int memberId) {
+	return ClaimService.getALLClaimByMemberId(memberId);
+}
+public static List getALLClaimByPolicyId(int policyId) {
+	return ClaimService.getALLClaimByPolicyId(policyId);
+}
+
+}

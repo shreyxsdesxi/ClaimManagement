@@ -1,0 +1,5 @@
+spring.application.name=member-service
+server.port=8001
+spring.datasource.url=jdbc:h2:mem:memberdatabase
+spring.h2.console.enabled=true
+spring.config.import=optional:configserver:

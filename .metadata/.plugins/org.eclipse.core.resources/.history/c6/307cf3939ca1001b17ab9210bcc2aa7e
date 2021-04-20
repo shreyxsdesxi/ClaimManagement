@@ -1,0 +1,9 @@
+package com.cognizant.claimservice.model;
+
+public class Provider {
+	
+	private int hospitalId;
+	private String hospitalName;
+	private String location;
+	
+}

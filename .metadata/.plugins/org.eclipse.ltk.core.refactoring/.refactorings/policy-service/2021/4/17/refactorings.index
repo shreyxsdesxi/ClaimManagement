@@ -1,0 +1,22 @@
+1618744815981	Delete element
+1618744823242	Delete element
+1618745196425	Delete element
+1618745992179	Delete element
+1618748680724	Rename type 'MemberPolicy'
+1618751983911	Rename type 'ClaimsServiceApplication'
+1618752007875	Rename package 'com.cognizant.claimsService'
+1618752025664	Rename package 'com.cognizant.claimsService.controller'
+1618752038647	Rename package 'com.cognizant.claimsService.entity'
+1618752053968	Rename package 'com.cognizant.claimsService.repository'
+1618752066001	Rename package 'com.cognizant.claimsService.service'
+1618752124509	Rename type 'ClaimsController'
+1618753510655	Rename type 'PolicyRepository'
+1618825853988	Delete element
+1618825877351	Delete element
+1618825883384	Delete element
+1618825950861	Delete element
+1618828164987	Rename type 'MemberPolicy'
+1618834122962	Rename type 'PolicyCommandLineRunner'
+1618835047883	Rename type 'Controller'
+1618835056986	Delete element
+1618844931906	Move compilation unit

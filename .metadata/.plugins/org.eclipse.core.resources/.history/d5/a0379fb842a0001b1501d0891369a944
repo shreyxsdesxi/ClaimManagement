@@ -1,0 +1,2 @@
+insert into policies(benefits, premium, tenure)
+values ('Good', 20,10), ('okay', 0,100), ('Bad', 200,105);

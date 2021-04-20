@@ -1,0 +1,27 @@
+package com.cognizant.memberservice.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cognizant.memberservice.model.MemberPremium;
+import com.cognizant.memberservice.model.Members;
+import com.cognizant.memberservice.service.MembersServices;
+import com.cognizant.memberservice.service.PremiumServices;
+
+@RestController
+public class MembersController {
+	@Autowired
+	MembersServices membersServices;
+	@Autowired
+	PremiumServices premiumServices;
+	@GetMapping(value="/viewBills/{policyId}/{MemberId}")
+	public MemberPremium viewBills(@PathVariable int policyId,@PathVariable int MemberId)
+	{
+	 Members members1 = membersServices.getMemberById(MemberId);
+	 MemberPremium memberPremium = premiumServices.premium(policyId,members1);
+	 return memberPremium;
+	}
+
+}

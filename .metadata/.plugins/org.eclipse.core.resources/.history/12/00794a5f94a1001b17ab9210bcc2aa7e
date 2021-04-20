@@ -1,0 +1,36 @@
+package com.cognizant.claimservice.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cognizant.claimservice.service.ClaimService;
+
+import antlr.collections.List;
+
+@RestController
+public class ClaimController {
+	
+	@GetMapping ("/getClaimStatus")
+	public <Claim> List findAllClaim(){
+		return ClaimService.getALLClaim;
+		
+	}
+	
+	@GetMapping ("/getClaimStatus/{claimId}")
+	public <Claim> List findAllClaimByClaimID(@PathVariable int claimId) {
+		return ClaimService.getALLClaimByClaimId(claimId);
+		
+	}
+
+	@GetMapping ("/getClaimStatus/{memberId}")
+	public <Claim> List findAllClaimByMemberID(@PathVariable int memberId) {
+		return ClaimService.getALLClaimByMemberId(memberId);	
+	}
+	@GetMapping ("/getClaimStatus/{policyId}")
+	public <Claim> List findAllClaimByPolicyID(@PathVariable int policyId) {
+		return ClaimService.getALLClaimByPolicyId(policyId);
+		
+	}
+}

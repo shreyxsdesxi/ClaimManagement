@@ -1,0 +1,40 @@
+package com.cognizant.policyService.controller;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cognizant.policyService.entity.PolicyMember;
+import com.cognizant.policyService.service.PolicyMemberService;
+
+@RestController
+//@RequestMapping(value = "/claims")
+public class ClaimsController {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(PolicyController.class);
+	
+	private PolicyMemberService policyService;
+	
+//	@Autowired
+//	private ClaimService claimService;
+//	
+//	@GetMapping(value = "/{memberId}")
+//	public List<Claim> getClaims(@PathVariable int memberId){
+//		List<Claim> allClaimsWithMemberId = claimService.getAllClaimsWithMemberId(memberId);
+//		LOGGER.info("Claims: {}", allClaimsWithMemberId);
+//		return allClaimsWithMemberId;
+//	}
+	
+	@GetMapping(value = "/test/{id}")
+	public List<PolicyMember> getPolicy(@PathVariable int id){
+		return policyService.findAllPolicy(id);
+	}
+	
+	
+	
+}

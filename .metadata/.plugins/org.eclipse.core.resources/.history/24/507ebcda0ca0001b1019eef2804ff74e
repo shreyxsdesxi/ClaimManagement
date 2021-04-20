@@ -1,0 +1,8 @@
+package com.cognizant.memberService.proxy;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name = "claims-service", url = "localhost:8000")
+public interface ClaimProxy {
+
+}

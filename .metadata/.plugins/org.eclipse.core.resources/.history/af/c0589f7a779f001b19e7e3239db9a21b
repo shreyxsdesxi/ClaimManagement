@@ -1,0 +1,18 @@
+package com.cognizant.memberService.entity;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+public class Claim {
+	
+	long id;
+	String claimStatus;
+	
+	@ManyToOne
+	@JoinColumn(name = "member_id")
+	Member member;
+	
+	
+	long policyId;
+	
+}

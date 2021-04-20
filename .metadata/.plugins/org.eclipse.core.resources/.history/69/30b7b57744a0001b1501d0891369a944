@@ -1,0 +1,5 @@
+package com.cognizant.claimsService.repository;
+
+public interface PolicyRepository {
+
+}

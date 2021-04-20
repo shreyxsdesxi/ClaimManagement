@@ -1,0 +1,56 @@
+package com.cognizant.claimsService.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "member_policy")
+public class MemberPolicy {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@OneToOne
+	@JoinColumn(name = "policy_id")
+	private Policy policyId;
+	
+	private int memberId;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
+
+	public int getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(int memberId) {
+		this.memberId = memberId;
+	}
+
+	public MemberPolicy(int id, Policy policy, int memberId) {
+		super();
+		this.id = id;
+		
+		this.memberId = memberId;
+	}
+
+	public MemberPolicy() {
+		super();
+	}
+	
+	
+
+}

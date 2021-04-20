@@ -1,0 +1,15 @@
+create table members (
+	id int primary key auto_increment,
+    first_name varchar(100),
+    last_name varchar(100)
+); 
+
+insert into members(first_name, last_name)
+values ('Shreyas', 'Desai'), ('Nikita', 'Naik'), ('Siddhart','Pawar');
+
+create table claims(
+	claim_id int primary key auto_increment,
+    claim_status varchar(500),
+    member_id int,
+    foreign key (member_id) references members(id)
+);

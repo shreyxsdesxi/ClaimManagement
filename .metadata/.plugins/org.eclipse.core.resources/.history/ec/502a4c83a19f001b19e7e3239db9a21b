@@ -1,0 +1,5 @@
+
+
+insert into members(first_name, last_name)
+values ('Shreyas', 'Desai'), ('Nikita', 'Naik'), ('Siddhart','Pawar');
+

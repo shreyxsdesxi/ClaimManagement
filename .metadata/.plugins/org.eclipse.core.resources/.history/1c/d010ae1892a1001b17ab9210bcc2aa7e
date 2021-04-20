@@ -1,0 +1,36 @@
+package com.cognizant.claimservice.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Claims")
+public class Claims {
+	@Id
+	private int claimNumber;
+    private String status ;
+    private String remarks;
+    private int policyNumber ;
+    private String hospitalDetails ;
+    
+    private String benifits ;
+    private int amountClaimed;
+    private int amountSettled;
+    private int memberId;
+    private String action;
+	public void setClaimId(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setMemberId(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setPolicyId(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+    
+
+}

@@ -1,0 +1,18 @@
+package com.cognizant.memberService.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cognizant.claimsService.entity.Member;
+import com.cognizant.memberService.repository.MemberRepository;
+
+@Service
+public class MemberService {
+	
+	@Autowired
+	private MemberRepository memberRepository;
+	
+	public Member findById(int id) {
+		return memberRepository.findById(id);
+	}
+}
