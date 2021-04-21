@@ -10,7 +10,7 @@ import antlr.collections.List;
 
 @Service
 public class ClaimService {
-	public static List getALLClaim;
+	
 	@Autowired
 	ClaimRepo crepository;
 

@@ -1,6 +1,9 @@
 package com.cognizant.memberservice.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +31,7 @@ public class MembersController {
 	public MemberPremium viewBills(@PathVariable int policyId, @PathVariable int MemberId) {
 		Members members1 = membersServices.getMemberById(MemberId);
 		MemberPremium memberPremium = premiumServices.premium(policyId, members1);
+		System.out.println(memberPremium);
 		return memberPremium;
 	}
 
@@ -56,6 +60,17 @@ public class MembersController {
 		String postForObject = rt.postForObject("http://localhost:8000/submitClaim/{policyId}/{memberId}", claim,
 				String.class, uriVariables);
 		return postForObject;
+	}
+	
+	@GetMapping(value = "/viewPremium/{memberId}")
+	public List<MemberPremium> viewPremium(@PathVariable int memberId){
+		Members members1 = membersServices.getMemberById(memberId);
+		Set<MemberPremium> premiumSet = members1.getPremium();
+		List<MemberPremium> premiumList = new ArrayList<>();
+		for(MemberPremium m : premiumSet) {
+			premiumList.add(m);
+		}
+		return premiumList;
 	}
 
 }

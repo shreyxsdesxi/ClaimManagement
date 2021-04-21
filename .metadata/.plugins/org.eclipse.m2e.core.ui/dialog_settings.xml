@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\User\eclipse-java-training\truYum"/>
+			<item value="D:\eclipse-workspace-microservices-new\member-portal"/>
+			<item value="D:\eclipse-workspace-microservices-new\member-service"/>
+			<item value="D:\eclipse-workspace-microservices-new\claim-service"/>
 			<item value="d:\Users\User\Downloads\member-service"/>
 			<item value="d:\Users\User\Downloads\Springboot-Microservice-main\service-registry"/>
 		</list>

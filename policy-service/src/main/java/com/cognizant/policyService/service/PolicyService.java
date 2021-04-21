@@ -13,6 +13,6 @@ public class PolicyService {
 	private PolicyRepository policyRepository;
 	
 	public Policy getPolicy(int id) {
-		return policyRepository.findByPolicyId(id);
+		return policyRepository.findByPolicyNumber(id);
 	}
 }

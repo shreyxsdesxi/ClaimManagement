@@ -1,19 +1,18 @@
 
 
-java:S2293ƒ"YReplace the type specification in this constructor call with the diamond operator ("<>").(õğş¶8ÖÙÈÖ/HÏRMINORZ
+java:S2293…"YReplace the type specification in this constructor call with the diamond operator ("<>").(õğş¶8ÖÙÈÖ/HßRMINORZ
 CODE_SMELL
 ‘
-java:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").( Í¯Úúÿÿÿÿ8ÉôÖ/Hâ
-RMINORZ
+java:S2293n"YReplace the type specification in this constructor call with the diamond operator ("<>").( Í¯Úúÿÿÿÿ8ÉôÖ/HŞRMINORZ
 CODE_SMELL
-s	java:S125C"<This block of commented-out lines of code should be removed.(ğ„ˆßüÿÿÿÿ8Ş½‘Õ/HÓ	RMAJORZ
+l	java:S125'"<This block of commented-out lines of code should be removed.(´í…¡şÿÿÿÿHàRMAJORZ
 CODE_SMELL
-l	java:S125'"<This block of commented-out lines of code should be removed.(´í…¡şÿÿÿÿH—RMAJORZ
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ßıµıÿÿÿÿHÜRMINORZ
 CODE_SMELL
-Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ßıµıÿÿÿÿH–RMINORZ
+s	java:S1251"<This block of commented-out lines of code should be removed.(—ò—ûÿÿÿÿ8Ú©Ì/HÒRMAJORZ
 CODE_SMELL
 V
-java:S1068"*Remove this unused "LOGGER" private field.(òËºHRMAJORZ
+java:S1068"*Remove this unused "LOGGER" private field.(òËºHİRMAJORZ
 CODE_SMELL
-s	java:S1251"<This block of commented-out lines of code should be removed.(—ò—ûÿÿÿÿ8Ú©Ì/H§RMAJORZ
+s	java:S125C"<This block of commented-out lines of code should be removed.(ğ„ˆßüÿÿÿÿ8Ş½‘Õ/HÙRMAJORZ
 CODE_SMELL

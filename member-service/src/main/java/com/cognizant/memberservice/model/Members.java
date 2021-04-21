@@ -3,10 +3,14 @@ package com.cognizant.memberservice.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -98,5 +102,13 @@ public class Members {
 	@JsonIgnore
 	@OneToMany(mappedBy="members")
 	private Set<MemberPremium> premium=new HashSet<>();
+	
+	
+	
+//	@ManyToMany(cascade = CascadeType)
+//	@JoinTable(name = "mem_pre", joinColumns = @JoinColumn(name = "mp_member_id", referencedColumnName = "member_id"), inverseJoinColumns = @JoinColumn(name = "mp_premium_id", referencedColumnName = "id"))
+//	private Set<MemberPremium> premium = new HashSet<>();
+	
+	
 
 }

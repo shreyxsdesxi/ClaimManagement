@@ -1,6 +1,6 @@
 
-…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İÀêHıRMINORZ
-CODE_SMELL
 r
-java:S1128":Remove this unused import 'javax.persistence.JoinColumns'.(‡ÛµÇøÿÿÿÿ8ñ·¢Ì/HRMINORZ
+java:S1128":Remove this unused import 'javax.persistence.JoinColumns'.(‡ÛµÇøÿÿÿÿ8ñ·¢Ì/HÆRMINORZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İÀêHÇRMINORZ
 CODE_SMELL

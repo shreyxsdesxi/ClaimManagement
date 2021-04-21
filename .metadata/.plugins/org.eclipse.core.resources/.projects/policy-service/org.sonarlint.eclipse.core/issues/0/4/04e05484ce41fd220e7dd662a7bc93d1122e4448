@@ -1,15 +1,24 @@
 
-`
-java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX8˜–ìÓ/HÚRMINORZ
+„	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(òë¾&HRMINORZ
 CODE_SMELL
-„	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(òë¾&H÷RMINORZ
+“
+java:S1192<"XDefine a constant instead of duplicating this literal "Up to 6 family members " 4 times.(ëéıÿÿÿÿ8Ëì‰ı/HºRCRITICALZ
 CODE_SMELL
-
-java:S1192-"WDefine a constant instead of duplicating this literal "No of Members Covered " 3 times.(‰‘¤¾8—ÙÁÔ/HìRCRITICALZ
-CODE_SMELL
-b
-java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8˜–ìÓ/HÛRMINORZ
+†
+java:S1192("QDefine a constant instead of duplicating this literal "Newlife Hospital" 3 times.(ÊÎÕ{8Ëì‰ı/H¿RCRITICALZ
 CODE_SMELL
 ‰
-java:S1192/"TDefine a constant instead of duplicating this literal "Maximum sum assured" 3 times.(ıÈ™Y8—ÙÁÔ/HğRCRITICALZ
+java:S11927"TDefine a constant instead of duplicating this literal "Maximum sum assured" 5 times.(ıÈ™Y8—ÙÁÔ/H‚RCRITICALZ
+CODE_SMELL
+
+java:S11925"WDefine a constant instead of duplicating this literal "No of Members Covered " 5 times.(‰‘¤¾8—ÙÁÔ/H†RCRITICALZ
+CODE_SMELL
+ˆ
+java:S1192F"MDefine a constant instead of duplicating this literal "Rs. 8 lakhs " 3 times.(¸öÖ³øÿÿÿÿ8Ëì‰ı/HÃRCRITICALZ
+CODE_SMELL
+b
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8˜–ìÓ/H‹RMINORZ
+CODE_SMELL
+`
+java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX8˜–ìÓ/HŠRMINORZ
 CODE_SMELL

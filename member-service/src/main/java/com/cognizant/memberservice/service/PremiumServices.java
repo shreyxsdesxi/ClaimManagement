@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 import com.cognizant.memberservice.model.MemberPremium;
 import com.cognizant.memberservice.model.Members;
-import com.cognizant.memberservice.repository.PremiumRepository;
+import com.cognizant.memberservice.repository.MemberPremiumRepository;
 
 @Service
 public class PremiumServices {
 	@Autowired
-    PremiumRepository  premiumRepository;
+    MemberPremiumRepository  premiumRepository;
 	@Transactional
 	public List<MemberPremium> findPremiumDetails() {
 		

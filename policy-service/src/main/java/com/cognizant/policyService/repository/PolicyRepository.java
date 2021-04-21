@@ -8,6 +8,6 @@ import com.cognizant.policyService.entity.Policy;
 @Repository
 public interface PolicyRepository extends JpaRepository<Policy, Integer>{
 	
-	Policy findByPolicyId(int id);
+	Policy findByPolicyNumber(int id);
 	
 }

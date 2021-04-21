@@ -1,8 +1,0 @@
-package com.cognizant.memberService.entity;
-
-public class Premium {
-	
-	private int premiumId;
-	
-	
-}

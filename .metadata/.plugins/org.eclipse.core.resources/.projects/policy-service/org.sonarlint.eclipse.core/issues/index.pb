@@ -25,3 +25,5 @@ l
 Msrc/main/java/com/cognizant/policyService/PolicyServiceCommandLineRunner.java,0\4\04e05484ce41fd220e7dd662a7bc93d1122e4448
 z
 Jsrc/main/java/com/cognizant/policyService/controller/PolicyController.java,9\0\90c81d2169e7ae4eedc166c0db06b987f5d85b11
+z
+Jsrc/main/java/com/cognizant/policyService/repository/MemberRepository.java,e\8\e8f73b2d269f1737ae028b1465e475e3c4a1d694

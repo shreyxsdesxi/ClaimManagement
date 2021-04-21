@@ -1,5 +1,0 @@
-insert into members(first_name, last_name)
-values ('Shreyas', 'Desai'), ('Nikita', 'Naik'), ('Siddhart','Pawar');
-
-insert into claims(claim_status, member_id)
-values("Disputed", 1);
